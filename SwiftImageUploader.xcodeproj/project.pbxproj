@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264A5F2A0AEEBFE52B067DF7 /* Pods_SwiftImageUploaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E7B04E8585F77B9D712488 /* Pods_SwiftImageUploaderTests.framework */; };
+		2EFB16A8DF9266B3A3791A89 /* Pods_SwiftImageUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC47AA9F65EA66CF3BC85B1B /* Pods_SwiftImageUploader.framework */; };
+		7292F7DB390EE8C0093B63D5 /* Pods_SwiftImageUploaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A35643315BB24475EE2833E /* Pods_SwiftImageUploaderUITests.framework */; };
 		AD6A4E0D1D1A48FE00DD4E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E0C1D1A48FE00DD4E8A /* AppDelegate.swift */; };
-		AD6A4E0F1D1A48FE00DD4E8A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E0E1D1A48FE00DD4E8A /* MasterViewController.swift */; };
-		AD6A4E111D1A48FE00DD4E8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E101D1A48FE00DD4E8A /* DetailViewController.swift */; };
 		AD6A4E141D1A48FE00DD4E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6A4E121D1A48FE00DD4E8A /* Main.storyboard */; };
 		AD6A4E161D1A48FE00DD4E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6A4E151D1A48FE00DD4E8A /* Assets.xcassets */; };
 		AD6A4E191D1A48FE00DD4E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6A4E171D1A48FE00DD4E8A /* LaunchScreen.storyboard */; };
 		AD6A4E241D1A48FF00DD4E8A /* SwiftImageUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E231D1A48FF00DD4E8A /* SwiftImageUploaderTests.swift */; };
 		AD6A4E2F1D1A48FF00DD4E8A /* SwiftImageUploaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E2E1D1A48FF00DD4E8A /* SwiftImageUploaderUITests.swift */; };
+		AD6A4E771D1A4C3100DD4E8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E761D1A4C3100DD4E8A /* ViewController.swift */; };
+		AD6A4E791D1AC6D000DD4E8A /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E781D1AC6D000DD4E8A /* Uploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06144B750AE13982556BD2FC /* Pods-SwiftImageUploaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploaderTests/Pods-SwiftImageUploaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A35643315BB24475EE2833E /* Pods_SwiftImageUploaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftImageUploaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87CF0D74A36EF678F0ABCA03 /* Pods-SwiftImageUploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploader/Pods-SwiftImageUploader.release.xcconfig"; sourceTree = "<group>"; };
+		9B64E5FB8DE1311D717B65C5 /* Pods-SwiftImageUploaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploaderTests/Pods-SwiftImageUploaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		A5E7B04E8585F77B9D712488 /* Pods_SwiftImageUploaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftImageUploaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6A4E091D1A48FE00DD4E8A /* SwiftImageUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftImageUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6A4E0C1D1A48FE00DD4E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD6A4E0E1D1A48FE00DD4E8A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		AD6A4E101D1A48FE00DD4E8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD6A4E131D1A48FE00DD4E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD6A4E151D1A48FE00DD4E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD6A4E181D1A48FE00DD4E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		AD6A4E2A1D1A48FF00DD4E8A /* SwiftImageUploaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftImageUploaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6A4E2E1D1A48FF00DD4E8A /* SwiftImageUploaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftImageUploaderUITests.swift; sourceTree = "<group>"; };
 		AD6A4E301D1A48FF00DD4E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD6A4E761D1A4C3100DD4E8A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD6A4E781D1AC6D000DD4E8A /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
+		BCCC32A3AB4B4416BACEAA33 /* Pods-SwiftImageUploaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploaderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploaderUITests/Pods-SwiftImageUploaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC47AA9F65EA66CF3BC85B1B /* Pods_SwiftImageUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftImageUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7DC213878EA3ECEAB4272EB /* Pods-SwiftImageUploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploader/Pods-SwiftImageUploader.debug.xcconfig"; sourceTree = "<group>"; };
+		F670EFC55709FFD4DE1E3C4B /* Pods-SwiftImageUploaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploaderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploaderUITests/Pods-SwiftImageUploaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFB16A8DF9266B3A3791A89 /* Pods_SwiftImageUploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264A5F2A0AEEBFE52B067DF7 /* Pods_SwiftImageUploaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7292F7DB390EE8C0093B63D5 /* Pods_SwiftImageUploaderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70D750BAD103D3B697B3A561 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC47AA9F65EA66CF3BC85B1B /* Pods_SwiftImageUploader.framework */,
+				A5E7B04E8585F77B9D712488 /* Pods_SwiftImageUploaderTests.framework */,
+				2A35643315BB24475EE2833E /* Pods_SwiftImageUploaderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81219ED4DB625B389255C4FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7DC213878EA3ECEAB4272EB /* Pods-SwiftImageUploader.debug.xcconfig */,
+				87CF0D74A36EF678F0ABCA03 /* Pods-SwiftImageUploader.release.xcconfig */,
+				06144B750AE13982556BD2FC /* Pods-SwiftImageUploaderTests.debug.xcconfig */,
+				9B64E5FB8DE1311D717B65C5 /* Pods-SwiftImageUploaderTests.release.xcconfig */,
+				BCCC32A3AB4B4416BACEAA33 /* Pods-SwiftImageUploaderUITests.debug.xcconfig */,
+				F670EFC55709FFD4DE1E3C4B /* Pods-SwiftImageUploaderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD6A4E001D1A48FE00DD4E8A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +121,8 @@
 				AD6A4E221D1A48FF00DD4E8A /* SwiftImageUploaderTests */,
 				AD6A4E2D1D1A48FF00DD4E8A /* SwiftImageUploaderUITests */,
 				AD6A4E0A1D1A48FE00DD4E8A /* Products */,
+				81219ED4DB625B389255C4FF /* Pods */,
+				70D750BAD103D3B697B3A561 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				AD6A4E0C1D1A48FE00DD4E8A /* AppDelegate.swift */,
-				AD6A4E0E1D1A48FE00DD4E8A /* MasterViewController.swift */,
-				AD6A4E101D1A48FE00DD4E8A /* DetailViewController.swift */,
 				AD6A4E121D1A48FE00DD4E8A /* Main.storyboard */,
 				AD6A4E151D1A48FE00DD4E8A /* Assets.xcassets */,
 				AD6A4E171D1A48FE00DD4E8A /* LaunchScreen.storyboard */,
 				AD6A4E1A1D1A48FE00DD4E8A /* Info.plist */,
+				AD6A4E761D1A4C3100DD4E8A /* ViewController.swift */,
+				AD6A4E781D1AC6D000DD4E8A /* Uploader.swift */,
 			);
 			path = SwiftImageUploader;
 			sourceTree = "<group>";
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD6A4E331D1A48FF00DD4E8A /* Build configuration list for PBXNativeTarget "SwiftImageUploader" */;
 			buildPhases = (
+				262A895E936B552DF4FF432B /* [CP] Check Pods Manifest.lock */,
 				AD6A4E051D1A48FE00DD4E8A /* Sources */,
 				AD6A4E061D1A48FE00DD4E8A /* Frameworks */,
 				AD6A4E071D1A48FE00DD4E8A /* Resources */,
+				FE5653A4C07F609B1F5818F7 /* [CP] Embed Pods Frameworks */,
+				996AAD717506DCD0533ABF70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD6A4E361D1A48FF00DD4E8A /* Build configuration list for PBXNativeTarget "SwiftImageUploaderTests" */;
 			buildPhases = (
+				827D2708D051648785A36719 /* [CP] Check Pods Manifest.lock */,
 				AD6A4E1B1D1A48FF00DD4E8A /* Sources */,
 				AD6A4E1C1D1A48FF00DD4E8A /* Frameworks */,
 				AD6A4E1D1D1A48FF00DD4E8A /* Resources */,
+				42D983E3DC2FFAE69081E1D3 /* [CP] Embed Pods Frameworks */,
+				5EF8FC3A2C3F2F04404AF6A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD6A4E391D1A48FF00DD4E8A /* Build configuration list for PBXNativeTarget "SwiftImageUploaderUITests" */;
 			buildPhases = (
+				F6C3ED7B12A929B4B694A6E5 /* [CP] Check Pods Manifest.lock */,
 				AD6A4E261D1A48FF00DD4E8A /* Sources */,
 				AD6A4E271D1A48FF00DD4E8A /* Frameworks */,
 				AD6A4E281D1A48FF00DD4E8A /* Resources */,
+				A7A204D945B209AD366DE62E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +244,7 @@
 				TargetAttributes = {
 					AD6A4E081D1A48FE00DD4E8A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 44PM5RKT52;
 					};
 					AD6A4E1E1D1A48FF00DD4E8A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -254,13 +303,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		262A895E936B552DF4FF432B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42D983E3DC2FFAE69081E1D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageUploaderTests/Pods-SwiftImageUploaderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EF8FC3A2C3F2F04404AF6A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageUploaderTests/Pods-SwiftImageUploaderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827D2708D051648785A36719 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		996AAD717506DCD0533ABF70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageUploader/Pods-SwiftImageUploader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A204D945B209AD366DE62E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageUploaderUITests/Pods-SwiftImageUploaderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6C3ED7B12A929B4B694A6E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5653A4C07F609B1F5818F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageUploader/Pods-SwiftImageUploader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD6A4E051D1A48FE00DD4E8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6A4E111D1A48FE00DD4E8A /* DetailViewController.swift in Sources */,
-				AD6A4E0F1D1A48FE00DD4E8A /* MasterViewController.swift in Sources */,
+				AD6A4E791D1AC6D000DD4E8A /* Uploader.swift in Sources */,
+				AD6A4E771D1A4C3100DD4E8A /* ViewController.swift in Sources */,
 				AD6A4E0D1D1A48FE00DD4E8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,28 +575,39 @@
 		};
 		AD6A4E341D1A48FF00DD4E8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7DC213878EA3ECEAB4272EB /* Pods-SwiftImageUploader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftImageUploader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zongware.SwiftImageUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		AD6A4E351D1A48FF00DD4E8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87CF0D74A36EF678F0ABCA03 /* Pods-SwiftImageUploader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftImageUploader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zongware.SwiftImageUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		AD6A4E371D1A48FF00DD4E8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06144B750AE13982556BD2FC /* Pods-SwiftImageUploaderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SwiftImageUploaderTests/Info.plist;
@@ -437,6 +620,7 @@
 		};
 		AD6A4E381D1A48FF00DD4E8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B64E5FB8DE1311D717B65C5 /* Pods-SwiftImageUploaderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SwiftImageUploaderTests/Info.plist;
@@ -449,6 +633,7 @@
 		};
 		AD6A4E3A1D1A48FF00DD4E8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCC32A3AB4B4416BACEAA33 /* Pods-SwiftImageUploaderUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SwiftImageUploaderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -460,6 +645,7 @@
 		};
 		AD6A4E3B1D1A48FF00DD4E8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F670EFC55709FFD4DE1E3C4B /* Pods-SwiftImageUploaderUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SwiftImageUploaderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -488,6 +674,7 @@
 				AD6A4E351D1A48FF00DD4E8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD6A4E361D1A48FF00DD4E8A /* Build configuration list for PBXNativeTarget "SwiftImageUploaderTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +683,7 @@
 				AD6A4E381D1A48FF00DD4E8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD6A4E391D1A48FF00DD4E8A /* Build configuration list for PBXNativeTarget "SwiftImageUploaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +692,7 @@
 				AD6A4E3B1D1A48FF00DD4E8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

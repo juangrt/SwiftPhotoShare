@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AD6A4E081D1A48FE00DD4E8A"
+               BuildableName = "SwiftImageUploader.app"
+               BlueprintName = "SwiftImageUploader"
+               ReferencedContainer = "container:SwiftImageUploader.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AD6A4E1E1D1A48FF00DD4E8A"
+               BuildableName = "SwiftImageUploaderTests.xctest"
+               BlueprintName = "SwiftImageUploaderTests"
+               ReferencedContainer = "container:SwiftImageUploader.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AD6A4E291D1A48FF00DD4E8A"
+               BuildableName = "SwiftImageUploaderUITests.xctest"
+               BlueprintName = "SwiftImageUploaderUITests"
+               ReferencedContainer = "container:SwiftImageUploader.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AD6A4E081D1A48FE00DD4E8A"
+            BuildableName = "SwiftImageUploader.app"
+            BlueprintName = "SwiftImageUploader"
+            ReferencedContainer = "container:SwiftImageUploader.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AD6A4E081D1A48FE00DD4E8A"
+            BuildableName = "SwiftImageUploader.app"
+            BlueprintName = "SwiftImageUploader"
+            ReferencedContainer = "container:SwiftImageUploader.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AD6A4E081D1A48FE00DD4E8A"
+            BuildableName = "SwiftImageUploader.app"
+            BlueprintName = "SwiftImageUploader"
+            ReferencedContainer = "container:SwiftImageUploader.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
