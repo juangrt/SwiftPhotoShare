@@ -10,8 +10,30 @@ import Foundation
 import UIKit
 import Alamofire
 
+
+
+
+
+
 //Make this a singleton class
 class PhotoShareService: AnyObject {
+    
+    internal func segment(type:SegmentType) -> String {
+        switch type {
+        case SegmentType.PARTY:
+            return "party"
+        case SegmentType.MEDIA:
+            return "media"
+        case SegmentType.USER:
+            return "user"
+        }
+    }
+    
+    enum SegmentType {
+        case PARTY ,MEDIA , USER
+    }
+    
+    
     static let sharedInstance = PhotoShareService()
     private let hostKey = "host"
     private let host:String
@@ -39,18 +61,18 @@ class PhotoShareService: AnyObject {
         self.host = plistData[hostKey] as! String
     }
     
-    func getParties() ->  NSDictionary {
-        var partiesRaw = NSDictionary()
+    func get(seg:SegmentType, page:NSNumber , completion: (result: AnyObject) -> Void) {
+        print(self.host + segment(seg))
         
-        Alamofire.request(.GET , self.host + "party").responseJSON{
+        Alamofire.request(.GET , self.host + segment(seg)).responseJSON{
             response in switch response.result {
             case .Success(let JSON):
-                partiesRaw = JSON as! NSDictionary
+                let partiesRaw = JSON
+                completion(result: partiesRaw)
             case .Failure(let error):
                 print("Request failed with error: \(error)")
             }
         }
-        return partiesRaw
     }
     
     
