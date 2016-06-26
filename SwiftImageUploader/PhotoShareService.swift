@@ -11,22 +11,23 @@ import UIKit
 import Alamofire
 
 //Make this a singleton class
-class Uploader: AnyObject {
+class PhotoShareService: AnyObject {
     
-    //Constructor set up uploader
-    static let sharedInstance = Uploader()
+    func getParties() -> Array<AnyObject> {
+        
+        return [];
+    }
     
     
-    static func uploadFile(image: UIImage) {
-        let host:String = "http://192.168.100.162:3000/party/create"
+    func uploadFile(image: UIImage) {
+        let host:String = "http://localhost:3000/party/new"
         
         let imageData:NSData! = UIImageJPEGRepresentation(image, 1.0)
         
-        //Alamofire.upload(.POST, host, file: imageUrl)
         Alamofire.upload(.POST,
                          host,
                          multipartFormData: { multipartFormData in
-                            multipartFormData.appendBodyPart(data: imageData!, name: "mediaFile", fileName: "upload.jpg" , mimeType: "image/jpg")
+                            multipartFormData.appendBodyPart(data: imageData!, name: "headerImage", fileName: "upload.jpg" , mimeType: "image/jpg")
                             multipartFormData.appendBodyPart(data:"India".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, name :"name")
                         },
                          encodingCompletion: { encodingResult in
@@ -40,7 +41,6 @@ class Uploader: AnyObject {
                             }
         })
     }
-    //Get Server Settings from a config file key value pairs
     
     
     
