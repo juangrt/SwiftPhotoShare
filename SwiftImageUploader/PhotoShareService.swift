@@ -12,20 +12,56 @@ import Alamofire
 
 //Make this a singleton class
 class PhotoShareService: AnyObject {
+    static let sharedInstance = PhotoShareService()
+    private let hostKey = "host"
+    private let host:String
     
-    func getParties() -> Array<AnyObject> {
+    //To Do: Refactor pList reading
+    //Not a fan of this meathod of pList reading
+    //Method from https://makeapppie.com/2016/02/11/how-to-use-property-lists-plist-in-swift/
+    init() {
+        var format = NSPropertyListFormat.XMLFormat_v1_0
+        var plistData:[String:AnyObject] = [:]
         
-        return [];
+        let infoPlistPath:String? = NSBundle.mainBundle().pathForResource("config" , ofType: "plist")!
+        let config = NSFileManager.defaultManager().contentsAtPath(infoPlistPath!)!
+        
+        do{
+            plistData = try NSPropertyListSerialization.propertyListWithData(config,
+                                                                             options: .MutableContainersAndLeaves,
+                                                                             format: &format)
+                as! [String:AnyObject]
+        }
+        catch{
+            print("Error reading plist: \(error), format: \(format)")
+        }
+
+        self.host = plistData[hostKey] as! String
+    }
+    
+    func getParties() ->  NSDictionary {
+        var partiesRaw = NSDictionary()
+        
+        Alamofire.request(.GET , self.host + "party").responseJSON{
+            response in switch response.result {
+            case .Success(let JSON):
+                partiesRaw = JSON as! NSDictionary
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
+        }
+        return partiesRaw
     }
     
     
     func uploadFile(image: UIImage) {
-        let host:String = "http://localhost:3000/party/new"
+        let apiUrl:String = self.host + "party/new"
         
+        //Add logic to upload right image representation
         let imageData:NSData! = UIImageJPEGRepresentation(image, 1.0)
         
         Alamofire.upload(.POST,
-                         host,
+                         apiUrl,
                          multipartFormData: { multipartFormData in
                             multipartFormData.appendBodyPart(data: imageData!, name: "headerImage", fileName: "upload.jpg" , mimeType: "image/jpg")
                             multipartFormData.appendBodyPart(data:"India".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, name :"name")
