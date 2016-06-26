@@ -9,6 +9,11 @@
 import Foundation
 
 class Party: AnyObject {
-
-
+    
+    static func getParties(page:NSNumber) -> [Party] {
+        
+        return []
+    }
+    
+    
 }
