@@ -13,6 +13,7 @@
 		AD5B1B2A1D2059B800015946 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1B291D2059B800015946 /* PartyViewController.swift */; };
 		AD5B1B2C1D205B0C00015946 /* Party.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B1B2B1D205B0C00015946 /* Party.storyboard */; };
 		AD5B1B2F1D2065E800015946 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1B2E1D2065E800015946 /* Party.swift */; };
+		AD5B1B331D20958800015946 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1B321D20958800015946 /* DateUtils.swift */; };
 		AD6A4E0D1D1A48FE00DD4E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A4E0C1D1A48FE00DD4E8A /* AppDelegate.swift */; };
 		AD6A4E141D1A48FE00DD4E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6A4E121D1A48FE00DD4E8A /* Main.storyboard */; };
 		AD6A4E161D1A48FE00DD4E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6A4E151D1A48FE00DD4E8A /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		AD5B1B291D2059B800015946 /* PartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
 		AD5B1B2B1D205B0C00015946 /* Party.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Party.storyboard; sourceTree = "<group>"; };
 		AD5B1B2E1D2065E800015946 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		AD5B1B321D20958800015946 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		AD6A4E091D1A48FE00DD4E8A /* SwiftImageUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftImageUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6A4E0C1D1A48FE00DD4E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6A4E131D1A48FE00DD4E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 			name = services;
 			sourceTree = "<group>";
 		};
+		AD5B1B311D20957C00015946 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1B321D20958800015946 /* DateUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		AD6A4E001D1A48FE00DD4E8A = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		AD6A4E0B1D1A48FE00DD4E8A /* SwiftImageUploader */ = {
 			isa = PBXGroup;
 			children = (
+				AD5B1B311D20957C00015946 /* Utils */,
 				AD5B1B301D2065FD00015946 /* services */,
 				AD5B1B2D1D2065DE00015946 /* models */,
 				AD5B1B281D20596C00015946 /* Party */,
@@ -470,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5B1B2F1D2065E800015946 /* Party.swift in Sources */,
+				AD5B1B331D20958800015946 /* DateUtils.swift in Sources */,
 				AD6A4E791D1AC6D000DD4E8A /* PhotoShareService.swift in Sources */,
 				AD6A4E771D1A4C3100DD4E8A /* ViewController.swift in Sources */,
 				AD6A4E0D1D1A48FE00DD4E8A /* AppDelegate.swift in Sources */,
