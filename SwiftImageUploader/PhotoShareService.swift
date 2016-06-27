@@ -10,11 +10,6 @@ import Foundation
 import UIKit
 import Alamofire
 
-
-
-
-
-
 //Make this a singleton class
 class PhotoShareService: AnyObject {
     
@@ -26,6 +21,17 @@ class PhotoShareService: AnyObject {
             return "media"
         case SegmentType.USER:
             return "user"
+        }
+    }
+    
+    internal func segmentUpload(type:SegmentType) -> String {
+        switch type {
+        case SegmentType.PARTY:
+            return "headerImage"
+        case SegmentType.MEDIA:
+            return "mediaImage"
+        case SegmentType.USER:
+            return "profileImage"
         }
     }
     
@@ -62,8 +68,6 @@ class PhotoShareService: AnyObject {
     }
     
     func get(seg:SegmentType, page:NSNumber , completion: (result: AnyObject) -> Void) {
-        print(self.host + segment(seg))
-        
         Alamofire.request(.GET , self.host + segment(seg)).responseJSON{
             response in switch response.result {
             case .Success(let JSON):
@@ -76,8 +80,8 @@ class PhotoShareService: AnyObject {
     }
     
     
-    func uploadFile(image: UIImage) {
-        let apiUrl:String = self.host + "party/new"
+    func uploadFile(seg:SegmentType, image: UIImage) {
+        let apiUrl:String = self.host + self.segment(seg) + "/new"
         
         //Add logic to upload right image representation
         let imageData:NSData! = UIImageJPEGRepresentation(image, 1.0)
@@ -85,7 +89,11 @@ class PhotoShareService: AnyObject {
         Alamofire.upload(.POST,
                          apiUrl,
                          multipartFormData: { multipartFormData in
-                            multipartFormData.appendBodyPart(data: imageData!, name: "headerImage", fileName: "upload.jpg" , mimeType: "image/jpg")
+                            //Appends the image
+                            //To Do: Ensure proper mimeType
+                            multipartFormData.appendBodyPart(data: imageData!, name: self.segmentUpload(seg), fileName: "upload.jpg" , mimeType: "image/jpg")
+                            
+                            //To Do: Dynamic keys?
                             multipartFormData.appendBodyPart(data:"India".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, name :"name")
                         },
                          encodingCompletion: { encodingResult in
