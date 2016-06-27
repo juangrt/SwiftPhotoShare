@@ -14,11 +14,19 @@ class Party: AnyObject {
     var title:String = ""
     var slug:String = ""
     var date:NSDate = NSDate()
+    var image:UIImage = UIImage()
+    
+    
     
     init(title:String , slug:String, date:NSDate){
         self.title = title
         self.slug = slug
         self.date = date
+        let imageUrl = "http://localhost:3000/party/" + self.slug + "/headerImage"
+        
+        UIImage.downloadedFrom(imageUrl, completion: { image in
+            self.image = image
+        })
     }
     
     static func getParties(page:NSNumber, completion: (result: [Party]) -> Void) {
