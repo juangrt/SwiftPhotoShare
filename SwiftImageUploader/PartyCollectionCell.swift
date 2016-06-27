@@ -12,7 +12,13 @@ import UIKit
 
 class PartyCollectionCell: UICollectionViewCell {
     
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var partyImage: UIImageView!
     
+    func setParty(party:Party)  {
+        title.text = party.title
+        partyImage.image = party.image
+    }
     
     
 }
