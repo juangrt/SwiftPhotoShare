@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class PartyCell: UICollectionViewCell {
+class PartyCollectionCell: UICollectionViewCell {
     
     
     
