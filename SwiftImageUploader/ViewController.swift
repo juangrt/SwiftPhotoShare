@@ -15,15 +15,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let imagePicker = UIImagePickerController()
     
     @IBAction func selectImageBtnPressed(sender: UIButton) {
-        Party.getParties(1, completion: { result in
-            debugPrint(result)
-        })
-        /*
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
         presentViewController(imagePicker, animated: true, completion: nil)
-        */
     }
     
     override func viewDidLoad() {
@@ -45,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.contentMode = .ScaleAspectFit
             imageView.image = pickedImage
             
-            PhotoShareService.sharedInstance.uploadFile(pickedImage)
+            PhotoShareService.sharedInstance.uploadFile(.MEDIA, image: pickedImage)
         }
         
         dismissViewControllerAnimated(true, completion: nil)
