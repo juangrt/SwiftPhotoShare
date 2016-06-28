@@ -21,6 +21,23 @@ class PartyViewController: UICollectionViewController{
             self.parties = result
             self.collectionView?.reloadData()
         })
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addTapped))
+    }
+    
+    func addTapped(button:UIBarButtonItem) {
+        performSegueWithIdentifier("CreateParty", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier {
+        case "CreateParty"?:
+            let view = navigationItem.rightBarButtonItem!.valueForKey("view")
+            //SourceRect needs to be adjusted
+            segue.destinationViewController.popoverPresentationController?.sourceRect = (view?.frame)!
+        default:
+            break
+        }
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
