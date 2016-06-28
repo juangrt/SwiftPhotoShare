@@ -17,7 +17,13 @@ class PartyCollectionCell: UICollectionViewCell {
     
     func setParty(party:Party)  {
         title.text = party.title
-        partyImage.image = party.image
+        let imageUrl = "http://localhost:3000/party/" + party.slug + "/headerImage"
+        
+        UIImage.downloadedFrom(imageUrl, completion: { image in
+            if (image != nil) {
+                self.partyImage.image = image
+            }
+        })
     }
     
     
