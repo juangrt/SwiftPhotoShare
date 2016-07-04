@@ -40,6 +40,8 @@ class PartyViewController: UICollectionViewController{
             let view = navigationItem.rightBarButtonItem!.valueForKey("view")
             //SourceRect needs to be adjusted
             segue.destinationViewController.popoverPresentationController?.sourceRect = (view?.frame)!
+        case "PartySelected"?:
+            (segue.destinationViewController as! MediaNavigationViewController).currentParty = (sender as! PartyCollectionCell).party
         default:
             break
         }
@@ -55,7 +57,7 @@ class PartyViewController: UICollectionViewController{
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PartyCell", forIndexPath: indexPath) as! PartyCollectionCell
         
-        cell.setParty(self.parties[indexPath.item])
+        cell.party = (self.parties[indexPath.item])
         return cell
     }
 
