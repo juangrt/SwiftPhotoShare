@@ -65,6 +65,7 @@
                                 <connections>
                                     <outlet property="partyImage" destination="R2Q-Gs-7Xt" id="aV0-29-25h"/>
                                     <outlet property="title" destination="IGQ-OK-qdu" id="J1K-t2-GHb"/>
+                                    <segue destination="5fR-9C-gmz" kind="showDetail" identifier="PartySelected" id="Dnw-xs-4hH"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -192,4 +193,7 @@
     <resources>
         <image name="7372fae1ae10b8cd4336e2843e74148d" width="500" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dnw-xs-4hH"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -31,6 +31,7 @@
 		ADD5564E1D2169670015B67D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5564D1D2169670015B67D /* UIImageExtension.swift */; };
 		ADF1C25C1D29A82400609225 /* CreatePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1C25B1D29A82400609225 /* CreatePartyViewController.swift */; };
 		ADF1C25E1D29DDED00609225 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1C25D1D29DDED00609225 /* MimeType.swift */; };
+		ADF1C2601D2A8FE200609225 /* MediaNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1C25F1D2A8FE200609225 /* MediaNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		ADD5564D1D2169670015B67D /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		ADF1C25B1D29A82400609225 /* CreatePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePartyViewController.swift; sourceTree = "<group>"; };
 		ADF1C25D1D29DDED00609225 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
+		ADF1C25F1D2A8FE200609225 /* MediaNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaNavigationViewController.swift; sourceTree = "<group>"; };
 		BCCC32A3AB4B4416BACEAA33 /* Pods-SwiftImageUploaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploaderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploaderUITests/Pods-SwiftImageUploaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC47AA9F65EA66CF3BC85B1B /* Pods_SwiftImageUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftImageUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DC213878EA3ECEAB4272EB /* Pods-SwiftImageUploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftImageUploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftImageUploader/Pods-SwiftImageUploader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				AD79E1761D275F5100AA5253 /* Media.storyboard */,
 				AD79E1781D275FB000AA5253 /* MediaCollectionViewController.swift */,
+				ADF1C25F1D2A8FE200609225 /* MediaNavigationViewController.swift */,
 			);
 			name = Media;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				ADF1C25E1D29DDED00609225 /* MimeType.swift in Sources */,
 				AD79E1791D275FB000AA5253 /* MediaCollectionViewController.swift in Sources */,
 				AD5B1B331D20958800015946 /* DateUtils.swift in Sources */,
+				ADF1C2601D2A8FE200609225 /* MediaNavigationViewController.swift in Sources */,
 				AD79E1711D2732DD00AA5253 /* Config.swift in Sources */,
 				ADF1C25C1D29A82400609225 /* CreatePartyViewController.swift in Sources */,
 				AD6A4E791D1AC6D000DD4E8A /* PhotoShareService.swift in Sources */,
