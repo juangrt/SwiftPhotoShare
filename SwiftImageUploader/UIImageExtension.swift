@@ -1,5 +1,5 @@
 //
-//  UIImageViewExtension.swift
+//  UIImageExtension.swift
 //  SwiftImageUploader
 //
 //  Created by Juan Carlos Garzon on 6/27/16.
