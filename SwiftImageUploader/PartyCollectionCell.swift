@@ -17,7 +17,7 @@ class PartyCollectionCell: UICollectionViewCell {
     
     func setParty(party:Party)  {
         title.text = party.title
-        let imageUrl = "http://localhost:3000/party/" + party.slug + "/headerImage"
+        let imageUrl = Config.sharedInstance.host + "party/" + party.slug + "/headerImage"
         
         UIImage.downloadedFrom(imageUrl, completion: { image in
             if (image != nil) {
