@@ -11,9 +11,14 @@ import UIKit
 import Alamofire
 
 //Make this a singleton class
-class PhotoShareService: AnyObject {
+class PhotoShareService {
+    static let sharedInstance = PhotoShareService()
     
-    internal func segment(type:SegmentType) -> String {
+    enum SegmentType {
+        case PARTY ,MEDIA , USER
+    }
+    
+    func segment(type:SegmentType) -> String {
         switch type {
         case SegmentType.PARTY:
             return "party"
@@ -24,7 +29,7 @@ class PhotoShareService: AnyObject {
         }
     }
     
-    internal func segmentUpload(type:SegmentType) -> String {
+    func segmentUpload(type:SegmentType) -> String {
         switch type {
         case SegmentType.PARTY:
             return "headerImage"
@@ -35,40 +40,63 @@ class PhotoShareService: AnyObject {
         }
     }
     
-    enum SegmentType {
-        case PARTY ,MEDIA , USER
+    private func segmentCreate(type:SegmentType) -> [String] {
+        var createParams = [String]()
+        switch type {
+        case SegmentType.PARTY:
+            createParams.append("title")
+            createParams.append("slug")
+            break
+        case SegmentType.MEDIA:
+            
+            break
+        case SegmentType.USER:
+            
+            break
+        }
+        
+        createParams.append("meta")
+        return createParams
     }
     
-    
-    static let sharedInstance = PhotoShareService()
-    private let hostKey = "host"
-    private let host:String
-    
-    //To Do: Refactor pList reading
-    //Not a fan of this meathod of pList reading
-    //Method from https://makeapppie.com/2016/02/11/how-to-use-property-lists-plist-in-swift/
-    init() {
-        var format = NSPropertyListFormat.XMLFormat_v1_0
-        var plistData:[String:AnyObject] = [:]
+    func new(seg:SegmentType, image: UIImage, params:[String:String],
+                                    completion: (result: AnyObject) -> Void) {
+        let apiUrl:String = Config.sharedInstance.host + self.segment(seg) + "/new"
         
-        let infoPlistPath:String? = NSBundle.mainBundle().pathForResource("config" , ofType: "plist")!
-        let config = NSFileManager.defaultManager().contentsAtPath(infoPlistPath!)!
         
-        do{
-            plistData = try NSPropertyListSerialization.propertyListWithData(config,
-                                                                             options: .MutableContainersAndLeaves,
-                                                                             format: &format)
-                as! [String:AnyObject]
-        }
-        catch{
-            print("Error reading plist: \(error), format: \(format)")
-        }
-
-        self.host = plistData[hostKey] as! String
+        let imageData:NSData! = UIImageJPEGRepresentation(image, 1.0)
+        
+        Alamofire.upload(.POST,
+                        apiUrl,
+                        multipartFormData:
+            { multipartFormData in
+                multipartFormData.appendBodyPart(data: imageData!,
+                    name: self.segmentUpload(seg), fileName: "upload.jpg" ,
+                    mimeType: "image/jpg")
+                
+                for param in params {
+                    multipartFormData.appendBodyPart(data: param.1.dataUsingEncoding(NSUTF8StringEncoding,
+                        allowLossyConversion: false)!, name : param.0)
+                }
+            }, encodingCompletion:
+            { encodingResult in
+                
+                switch encodingResult {
+                    case .Success(let upload, _, _):
+                        upload.responseJSON { response in
+                            debugPrint(response)
+                        }
+                    case .Failure(let encodingError):
+                        print(encodingError)
+                }
+                
+                completion(result: "")
+        })
+        
     }
     
     func get(seg:SegmentType, page:NSNumber , completion: (result: AnyObject) -> Void) {
-        Alamofire.request(.GET , self.host + segment(seg)).responseJSON{
+        Alamofire.request(.GET , Config.sharedInstance.host + segment(seg)).responseJSON{
             response in switch response.result {
             case .Success(let JSON):
                 let partiesRaw = JSON
@@ -81,7 +109,7 @@ class PhotoShareService: AnyObject {
     
     
     func uploadFile(seg:SegmentType, image: UIImage) {
-        let apiUrl:String = self.host + self.segment(seg) + "/new"
+        let apiUrl:String = Config.sharedInstance.host + self.segment(seg) + "/new"
         
         //Add logic to upload right image representation
         let imageData:NSData! = UIImageJPEGRepresentation(image, 1.0)

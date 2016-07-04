@@ -13,14 +13,19 @@ import UIKit
 class PartyViewController: UICollectionViewController{
     
     var parties = [Party]()
+    var currentPage = 0
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        Party.getParties(1, completion: {result in
+        Party.getParties(currentPage, completion: {result in
             self.parties = result
             self.collectionView?.reloadData()
         })
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addTapped))
     }

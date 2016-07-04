@@ -5,31 +5,13 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="WXD-k6-mqP">
+        <!--Media-->
+        <scene sceneID="CGm-4X-gnb">
             <objects>
-                <viewController id="EQo-68-CCv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fi6-OA-vV5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ats-y6-4Kv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MrZ-lU-61K">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Juan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddE-OD-x3k">
-                                <rect key="frame" x="211" y="346" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H5D-gN-AKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Media" id="5fR-9C-gmz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hke-yc-oPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139" y="177"/>
+            <point key="canvasLocation" x="-264.5" y="88"/>
         </scene>
         <!--Party view-->
         <scene sceneID="OFg-gZ-lc6">
@@ -105,7 +87,7 @@
         <!--CreateParty-->
         <scene sceneID="0EM-3M-KYa">
             <objects>
-                <viewController title="CreateParty" id="UKJ-w7-jvw" sceneMemberID="viewController">
+                <viewController title="CreateParty" id="UKJ-w7-jvw" customClass="CreatePartyViewController" customModule="SwiftImageUploader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bWt-vJ-19y"/>
                         <viewControllerLayoutGuide type="bottom" id="4bv-h2-WBF"/>
@@ -114,11 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-k3-uKO">
-                                <rect key="frame" x="20" y="28" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Slug" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vx4-yS-8Yj">
                                 <rect key="frame" x="20" y="66" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -127,16 +104,33 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22u-Yw-Vmq">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="cMR-fS-0PQ"/>
+                                    <barButtonItem systemItem="cancel" id="cMR-fS-0PQ">
+                                        <connections>
+                                            <action selector="onCancelPressed:" destination="UKJ-w7-jvw" id="zZX-Bs-WX5"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="r7f-E6-o0y"/>
-                                    <barButtonItem systemItem="camera" id="qxI-8J-aiQ"/>
+                                    <barButtonItem systemItem="camera" id="qxI-8J-aiQ">
+                                        <connections>
+                                            <action selector="onCameraPressed:" destination="UKJ-w7-jvw" id="lXl-UU-NJ9"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vAb-X0-sut"/>
-                                    <barButtonItem systemItem="save" id="Scm-d7-amZ"/>
+                                    <barButtonItem systemItem="save" id="Scm-d7-amZ">
+                                        <connections>
+                                            <action selector="onSavePressed:" destination="UKJ-w7-jvw" id="PhC-mI-Wqr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TX1-Uv-Yv3">
                                 <rect key="frame" x="20" y="104" width="560" height="444"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-k3-uKO">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -155,6 +149,11 @@
                             <constraint firstItem="TX1-Uv-Yv3" firstAttribute="top" secondItem="vx4-yS-8Yj" secondAttribute="bottom" constant="8" id="yVO-Ll-yAK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="TX1-Uv-Yv3" id="b4I-zy-jOe"/>
+                        <outlet property="slugField" destination="vx4-yS-8Yj" id="dyP-Od-K5H"/>
+                        <outlet property="titleField" destination="E6L-k3-uKO" id="E2f-hH-utE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krl-AA-3ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,13 +175,13 @@
             </objects>
             <point key="canvasLocation" x="-139" y="-483"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="43Q-zc-ima">
             <objects>
-                <splitViewController id="sAa-Fg-s0L" sceneMemberID="viewController">
+                <splitViewController id="sAa-Fg-s0L" customClass="RootViewController" customModule="SwiftImageUploader" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Ww3-q0-AJ1" kind="relationship" relationship="masterViewController" id="eEc-HN-noq"/>
-                        <segue destination="EQo-68-CCv" kind="relationship" relationship="detailViewController" id="UTy-ko-ZMl"/>
+                        <segue destination="5fR-9C-gmz" kind="relationship" relationship="detailViewController" id="lV2-sD-Ori"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbA-iD-bzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
