@@ -15,7 +15,13 @@ class PartyCollectionCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var partyImage: UIImageView!
     
-    func setParty(party:Party)  {
+    var party:Party! {
+        didSet {
+            configureParty()
+        }
+    }
+    
+    func configureParty()  {
         title.text = party.title
         let imageUrl = Config.sharedInstance.host + "party/" + party.slug + "/headerImage"
         
