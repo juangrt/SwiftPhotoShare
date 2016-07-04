@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Juan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byO-7P-RB6">
-                                <rect key="frame" x="260" y="289" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-TL-UAG">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -30,29 +24,48 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="30N-z8-opL"/>
                                 </items>
                             </toolbar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-eT-S0i">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gF6-2g-AcU">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MediaCell" id="HKU-Ug-3M6">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="byO-7P-RB6" firstAttribute="centerY" secondItem="ydz-qe-W7x" secondAttribute="centerY" id="P3D-qG-kNz"/>
-                            <constraint firstItem="byO-7P-RB6" firstAttribute="centerX" secondItem="ydz-qe-W7x" secondAttribute="centerX" id="Zgg-5z-4tD"/>
+                            <constraint firstItem="HUp-eT-S0i" firstAttribute="top" secondItem="ZsE-nH-OpX" secondAttribute="bottom" id="12H-gY-Mz5"/>
+                            <constraint firstItem="HUp-eT-S0i" firstAttribute="leading" secondItem="ydz-qe-W7x" secondAttribute="leading" id="EtX-tG-ZVE"/>
                             <constraint firstItem="tdt-Jq-hRR" firstAttribute="top" secondItem="x5F-TL-UAG" secondAttribute="bottom" id="d0c-yp-dGk"/>
                             <constraint firstItem="x5F-TL-UAG" firstAttribute="leading" secondItem="ydz-qe-W7x" secondAttribute="leading" id="eJo-Ty-GjJ"/>
+                            <constraint firstItem="x5F-TL-UAG" firstAttribute="top" secondItem="HUp-eT-S0i" secondAttribute="bottom" id="kd3-SW-VP5"/>
                             <constraint firstAttribute="trailing" secondItem="x5F-TL-UAG" secondAttribute="trailing" id="pU7-Rx-lu3"/>
+                            <constraint firstAttribute="trailing" secondItem="HUp-eT-S0i" secondAttribute="trailing" id="q1r-9Y-PxF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dfF-Dx-wa3"/>
-                    <connections>
-                        <outlet property="detailDescriptionLabel" destination="byO-7P-RB6" id="UXv-RI-ibZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0g8-4w-nmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="869"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Media Navigation View Controller-->
         <scene sceneID="kno-0j-VHG">
             <objects>
-                <navigationController id="RFl-Zl-cRf" sceneMemberID="viewController">
+                <navigationController id="RFl-Zl-cRf" customClass="MediaNavigationViewController" customModule="SwiftImageUploader" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mo6-K4-pX9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
