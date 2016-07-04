@@ -13,7 +13,7 @@ import Alamofire
 extension UIImage {
     
     static func downloadedFrom(link: String,
-                    contentMode mode: UIViewContentMode = .ScaleAspectFill ,
+                    contentMode mode: UIViewContentMode = .ScaleToFill ,
                                 completion: (image: UIImage?) -> Void)
     {    
         Alamofire.request(.GET, link).response {
