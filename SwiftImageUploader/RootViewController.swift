@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class RootViewController:UISplitViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+}
