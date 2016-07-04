@@ -40,29 +40,9 @@ class PhotoShareService {
         }
     }
     
-    private func segmentCreate(type:SegmentType) -> [String] {
-        var createParams = [String]()
-        switch type {
-        case SegmentType.PARTY:
-            createParams.append("title")
-            createParams.append("slug")
-            break
-        case SegmentType.MEDIA:
-            
-            break
-        case SegmentType.USER:
-            
-            break
-        }
-        
-        createParams.append("meta")
-        return createParams
-    }
-    
     func new(seg:SegmentType, image: UIImage, params:[String:String],
                                     completion: (result: AnyObject) -> Void) {
         let apiUrl:String = Config.sharedInstance.host + self.segment(seg) + "/new"
-        
         
         let imageData:NSData! = UIImageJPEGRepresentation(image, 1.0)
         
